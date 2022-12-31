@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>JavaScript to print Even Numbers within a Range!</title>
+    <script>
+      function printOdds(){
+        //get the start and end range from user
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+        var oddNums = "<br>Even Numbers:<br>";
+ 
+        for(i=start; i<=end; i++){
+          // let's divide the value by 2
+          // if the reminder is zero then it's an Even number
+          if(i % 3 == 0){
+            oddNums += i + "<br>";
+          }
+        }
+        //print the values
+        document.getElementById("result").innerHTML = oddNums;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>JavaScript to print Even Numbers within a Range!</h3>
+    Start: <input type="number" min="0" id="start" value="1" />
+    End: <input type="number" id="end" min="1" value="30" />
+    <input type="button" onclick="printOdds()" value="Print Even Numbers" />
+    <div id="result"></div>
+  </body>
+</html>
