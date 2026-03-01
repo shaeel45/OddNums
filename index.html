@@ -8,10 +8,10 @@
         var end = parseInt(document.getElementById("end").value);
         var oddNums = "<br>Even Numbers:<br>";
  
-        for(i=start; i<=end; i++){
+        for(let i = start; i <= end; i++){
           // let's divide the value by 2
           // if the reminder is zero then it's an Even number
-          if(i % 3 == 0){
+          if(i % 2 === 0){
             oddNums += i + "<br>";
           }
         }
@@ -22,7 +22,7 @@
   </head>
   <body>
     <h3>JavaScript to print Even Numbers within a Range!</h3>
-    Start: <input type="number" min="0" id="start" value="1" />
+    Start: <label for="start">Start:</label> <input type="number" min="0" id="start" value="1" />
     End: <input type="number" id="end" min="1" value="30" />
     <input type="button" onclick="printOdds()" value="Print Even Numbers" />
     <div id="result"></div>
